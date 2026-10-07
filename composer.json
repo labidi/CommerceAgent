@@ -1,0 +1,43 @@
+{
+    "name": "labidi/module-commerce-agent",
+    "description": "AI agents for Adobe Commerce, powered by Claude.",
+    "type": "magento2-module",
+    "license": "Apache-2.0",
+    "require": {
+        "php": "~8.2.0 || ~8.3.0 || ~8.4.0",
+        "magento/framework": "~103.0.7",
+        "magento/module-backend": "*",
+        "magento/module-catalog": "*",
+        "magento/module-catalog-inventory": "*",
+        "magento/module-config": "*",
+        "magento/module-sales": "*",
+        "magento/module-store": "*",
+        "magento/module-user": "*"
+    },
+    "require-dev": {
+        "magento/magento-coding-standard": "^38 || ^40 || ^41",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^10.5"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Labidi\\CommerceAgent\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "magento/composer-dependency-version-audit-plugin": true
+        }
+    }
+}
